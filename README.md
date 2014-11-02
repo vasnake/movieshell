@@ -48,6 +48,10 @@ After that you can start movieshell with command
     cmd.exe /k ar.cmd
 
 In case if autorun didn't work.
+Also in that case you can use `/bin/startup.cmd` script for launching movieshell.
+
+If you want to use DVD as a movies container, you can look at
+`/bin/fromdvd.cmd` script.
 
 ## Links
 
