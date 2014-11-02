@@ -23,7 +23,8 @@ Created on Dec 23, 2010
     You should have received a copy of the GNU General Public License
     along with MovieShell.  If not, see <http://www.gnu.org/licenses/>.
 
-константы для оболочки показывающей кино
+Constants for MovieShell
+
 '''
 
 CP = 'utf8'
