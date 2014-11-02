@@ -8,12 +8,14 @@ and you need to simplify access to that library,
 movieshell can help.
 
 It's a Python program with UI based on Tkinter.
+Writed and tested using MS Windows XP/Windows 7; Python 2.7
+
 For playing movies, two options supported:
 
 * [VLC media player](http://www.videolan.org/vlc/)
 * [Media Player Classic](http://mpc-hc.org/downloads/)
 
-For watch a movie, all you need is plug-in your ext. USB drive to computer,
+For watch a movie, all you need to do is plug-in your ext. USB drive to computer,
 start the movieshell (if autorun didn't do it) and
 click on button with movie name on it.
 If you click on button holding CTRL, movie will be started in alternate player.
@@ -28,9 +30,26 @@ Screenshots
 
 Copy files and folders from folder `driveroot` into root folder of your USB ext. drive.
 
-to be continued
+Install [Python 2.7](https://www.python.org/download/releases/2.7/) on computer.
 
-Links
+Copy contents of C:\Python27 to /bin/Python27 on ext. USB drive.
+
+Check contents of /bin/const.py file and make sure that movieshell can find video player executables.
+
+## Run
+
+Before using movieshell, you have to index movies library.
+To do so, start scan process
+
+    cmd.exe /k ar.cmd scan
+
+After that you can start movieshell with command
+
+    cmd.exe /k ar.cmd
+
+In case if autorun didn't work.
+
+## Links
 
 * http://vasnake.blogspot.ru/2013/02/movieshell.html
 * http://vasnake.blogspot.ru/2011/11/linux.html
