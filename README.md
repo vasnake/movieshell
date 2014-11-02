@@ -7,11 +7,24 @@ If you have some ext. USB drive with movies, like avi/mp4/mkv or maybe iso (vide
 and you need to simplify access to that library,
 movieshell can help.
 
+It's a Python program with UI based on Tkinter.
+For playing movies, two options supported:
+
+* [VLC media player](http://www.videolan.org/vlc/)
+* [Media Player Classic](http://mpc-hc.org/downloads/)
+
+For watch a movie, all you need is plug-in your ext. USB drive to computer,
+start the movieshell (if autorun didn't do it) and
+click on button with movie name on it.
+If you click on button holding CTRL, movie will be started in alternate player.
+
 Screenshots
 
 ![screenshot 1](movieshell01.png "screenshot 1")
 
 ![screenshot 2](movieshell02.png "screenshot 2")
+
+## Install
 
 Copy files and folders from folder `driveroot` into root folder of your USB ext. drive.
 
