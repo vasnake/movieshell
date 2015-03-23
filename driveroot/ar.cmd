@@ -16,13 +16,11 @@ pushd "%wd%"
 set PYTHONPATH=
 :: @cls
 
-set path=%dl%\bin\Python27;%dl%\bin;%dl%\bin\vlc;%path%
+set path=c:\Python27;%path%
+REM ~ set path=%dl%\bin\Python27;%dl%\bin;%dl%\bin\vlc;%path%
 
-REM ~ python.exe -u %dl%\bin\shell.py "%1"
-REM ~ start /min python.exe -u %dl%\bin\shell.py "%1" "%2"
-
-start pythonw.exe bin\shell.py "%1" "%2"
-REM ~ python.exe -u bin\shell.py "%1" "%2"
+REM ~ pythonw.exe bin\shell.py "%1" "%2"
+start /min python.exe -u bin\shell.py "%1" "%2"
 
 popd
 exit
