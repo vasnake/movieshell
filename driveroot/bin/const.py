@@ -29,9 +29,17 @@ Constants for MovieShell
 
 CP = 'utf8'
 
-PLAYER_VLC = r'bin\vlc\vlc.exe'
+PLAYER_VLC = (
+    r'c:\Program Files (x86)\VideoLAN\VLC\vlc.exe',
+    r'bin\vlc\vlc.exe'
+)
 OPTS_VLC = ['--fullscreen', '--video-on-top', '--sub-track=99']
-PLAYER_MPC = r'c:\Program Files (x86)\K-Lite Codec Pack\Media Player Classic\mpc-hc.exe'
+
+PLAYER_MPC = (
+    r'c:\Program Files (x86)\K-Lite Codec Pack\MPC-HC64\mpc-hc64.exe',
+    r'c:\Program Files (x86)\K-Lite Codec Pack\MPC-HC\mpc-hc.exe',
+    r'c:\Program Files (x86)\K-Lite Codec Pack\Media Player Classic\mpc-hc.exe'
+)
 OPTS_MPC = ['/play', '/close', '/fullscreen']
 
 MDB_FILENAME = u'.movieslist'

@@ -329,9 +329,22 @@ class VAppListMovies:
         if not os.path.exists(fn.encode('cp1251')):
             fn = u'%s' % m.fileName
 
-        cmdl = [const.PLAYER_MPC, fn.encode('cp1251')] + const.OPTS_MPC
-        if self.ctrlPressed or not os.path.exists(const.PLAYER_MPC):
-            cmdl = [rd+const.PLAYER_VLC] + const.OPTS_VLC + [fn.encode('cp1251')]
+        mpcPlayer = vlcPlayer = ''
+        for x in const.PLAYER_MPC:
+            if os.path.exists(x):
+                mpcPlayer = x
+                break
+        for x in const.PLAYER_VLC:
+            if os.path.exists(x):
+                vlcPlayer = x
+                break
+            elif os.path.exists(rd + x):
+                vlcPlayer = rd + x
+                break
+
+        cmdl = [mpcPlayer, fn.encode('cp1251')] + const.OPTS_MPC
+        if not mpcPlayer or self.ctrlPressed or not os.path.exists(mpcPlayer):
+            cmdl = [vlcPlayer] + const.OPTS_VLC + [fn.encode('cp1251')]
         print (u'cmd [%s]' % cmdl).encode('utf8')
         self.tk.iconify()
         print 'retcode [%s]' % subprocess.call(cmdl)
