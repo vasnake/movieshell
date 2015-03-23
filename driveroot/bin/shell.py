@@ -73,6 +73,7 @@ done
 
 usage = 'tcl/tk "Movies List" program. Compile to exe and use with autorun option for CD'
 
+import sys
 import os, time, re, subprocess
 from Tkinter import *
 
@@ -158,6 +159,11 @@ class VAppListMovies:
                 print "can't maximize window"
                 import traceback
                 traceback.print_exc(file=sys.stderr)
+            # try Tk method
+            if sys.platform != 'linux2':
+                w.wm_state('zoomed')
+            else:
+                w.wm_attributes('-zoomed', True)
     # def maximizeWindow(self):
 
 
